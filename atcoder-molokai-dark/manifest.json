@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AtCoder Molokai Dark",
+  "version": "0.1.11",
+  "description": "A Monokai/Molokai-inspired dark theme for AtCoder.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://atcoder.jp/*",
+        "https://www.atcoder.jp/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://atcoder.jp/users/*",
+        "https://www.atcoder.jp/users/*"
+      ],
+      "js": [
+        "page-theme.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

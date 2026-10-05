@@ -1,0 +1,1366 @@
+:root {
+  color-scheme: dark;
+
+  /* Molokai/Monokai base palette. */
+  --cf-bg: #1b1d1e;
+  --cf-bg-deep: #171819;
+  --cf-surface: #20211d;
+  --cf-surface-alt: #24251f;
+  --cf-surface-raised: #272822;
+  --cf-surface-hover: #30312b;
+  --cf-border: #3e3d32;
+
+  --cf-fg: #e8e8e3;
+  --cf-fg-strong: #f8f8f2;
+  --cf-muted: #a6a69c;
+  --cf-comment: #75715e;
+
+  --cf-pink: #f92672;
+  --cf-green: #a6e22e;
+  --cf-cyan: #66d9ef;
+  --cf-yellow: #e6db74;
+  --cf-purple: #ae81ff;
+  --cf-orange: #fd971f;
+  --cf-red: #ff5f5f;
+}
+
+html,
+body {
+  background: var(--cf-bg) !important;
+  color: var(--cf-fg) !important;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  color: var(--cf-fg);
+}
+
+::selection {
+  background: var(--cf-purple);
+  color: var(--cf-bg-deep);
+}
+
+/*
+ * Links are one of the few places where the bright Molokai colours should
+ * dominate. User rating colours below intentionally override this rule.
+ */
+a,
+a:visited {
+  color: var(--cf-cyan) !important;
+}
+
+a:hover,
+a:focus {
+  color: var(--cf-pink) !important;
+}
+
+hr {
+  border-color: var(--cf-border) !important;
+}
+
+#body,
+#pageContent,
+.content-with-sidebar,
+.content-with-sidebar .content,
+.content-with-sidebar .sidebar,
+.ttypography,
+.problem-statement {
+  background: transparent !important;
+  color: var(--cf-fg) !important;
+}
+
+/*
+ * Blog entries are page content, not cards. Giving every entry an olive
+ * rectangle made the home page look like somebody themed it with a shovel.
+ */
+.topic,
+.topic .content,
+.topic .ttypography {
+  background: transparent !important;
+  color: var(--cf-fg) !important;
+}
+
+/* Sidebar/card surfaces. */
+.roundbox,
+.roundbox-lt,
+.roundbox-rt,
+.roundbox-lb,
+.roundbox-rb,
+.sidebar-menu,
+.userbox,
+.notice,
+.alert,
+.info,
+.comment-table,
+.comment-content,
+.filter,
+#facebox .content {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.roundbox .caption,
+.roundbox .caption.titled,
+.caption,
+.caption.titled,
+.legend {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-yellow) !important;
+  border-color: var(--cf-border) !important;
+}
+
+/* Header and navigation. */
+#header {
+  background: transparent !important;
+}
+
+#header .lang-chooser,
+#header .personal-sidebar {
+  background: transparent !important;
+  color: var(--cf-muted) !important;
+}
+
+.menu-list,
+.second-level-menu-list,
+.second-level-menu-list ul,
+.second-level-menu-list li,
+.second-level-menu-list a {
+  background-color: var(--cf-surface) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.menu-list {
+  box-shadow: none !important;
+}
+
+.menu-list li a,
+.second-level-menu-list li a {
+  color: var(--cf-fg) !important;
+}
+
+.menu-list li a:hover,
+.second-level-menu-list li a:hover,
+.menu-list li.current a {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-pink) !important;
+}
+
+/* Tables. Codeforces colours individual cells, so styling only <tr> leaks white. */
+table,
+.datatable,
+.datatable table,
+.problems,
+.status-frame-datatable,
+.standings {
+  background: transparent !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.datatable table th,
+.datatable table td,
+table th,
+table td {
+  border-color: var(--cf-border) !important;
+  color: var(--cf-fg) !important;
+}
+
+.datatable table th,
+.datatable table thead td,
+thead tr,
+thead th {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-fg-strong) !important;
+}
+
+.datatable table tbody tr,
+.datatable table tbody tr td,
+tbody tr,
+tbody tr td {
+  background: var(--cf-surface) !important;
+}
+
+.datatable table tbody tr:nth-child(even),
+.datatable table tbody tr:nth-child(even) td,
+tbody tr:nth-child(even),
+tbody tr:nth-child(even) td {
+  background: var(--cf-surface-alt) !important;
+}
+
+.datatable table tbody tr:hover,
+.datatable table tbody tr:hover td,
+tbody tr:hover,
+tbody tr:hover td {
+  background: var(--cf-surface-hover) !important;
+}
+
+.datatable table tr.highlighted-row,
+.datatable table tr.highlighted-row td,
+tr.highlighted-row,
+tr.highlighted-row td {
+  background: #303126 !important;
+}
+
+/* Blog typography. */
+.topic .title,
+.topic .title a,
+.ttypography h1,
+.ttypography h2,
+.ttypography h3,
+.ttypography h4 {
+  color: var(--cf-fg-strong) !important;
+}
+
+.topic .info,
+.topic .meta,
+.topic .date,
+.topic .author {
+  background: transparent !important;
+  color: var(--cf-muted) !important;
+}
+
+/* Problem statements. */
+.problem-statement,
+.problem-statement p,
+.problem-statement li,
+.problem-statement .input,
+.problem-statement .output,
+.problem-statement .sample-tests,
+.problem-statement .note {
+  color: var(--cf-fg) !important;
+}
+
+.problem-statement .header,
+.problem-statement .title,
+.problem-statement .section-title {
+  color: var(--cf-fg-strong) !important;
+}
+
+.problem-statement .section-title {
+  border-bottom-color: var(--cf-border) !important;
+}
+
+.problem-statement .time-limit,
+.problem-statement .memory-limit,
+.problem-statement .input-file,
+.problem-statement .output-file {
+  color: var(--cf-muted) !important;
+}
+
+.problem-statement pre,
+pre,
+code,
+.prettyprint,
+.prettyprinted {
+  background: var(--cf-bg-deep) !important;
+  color: var(--cf-fg-strong) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.problem-statement .test-example-line-even,
+.problem-statement .test-example-line-odd {
+  background: transparent !important;
+}
+
+/* Forms. */
+input,
+select,
+textarea,
+button,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="submit"],
+input[type="button"] {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-fg-strong) !important;
+  border-color: var(--cf-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--cf-comment) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  border-color: var(--cf-cyan) !important;
+  outline-color: var(--cf-cyan) !important;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-yellow) !important;
+}
+
+/* Tags, labels and small UI elements. */
+.tag-box,
+.tag-box-v3,
+.badge,
+.label,
+.pagination span,
+.pagination a,
+.page-index {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-purple) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.tag-box:hover,
+.tag-box-v3:hover,
+.pagination a:hover {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-pink) !important;
+}
+
+/* Muted and secondary text. */
+.gray,
+.grey,
+.minor,
+.note,
+.small,
+[class*="secondary"] {
+  color: var(--cf-muted) !important;
+}
+
+/* Verdicts. */
+.verdict-accepted,
+.verdict-format-judgement .verdict-accepted {
+  color: var(--cf-green) !important;
+}
+
+.verdict-rejected,
+.verdict-format-judgement .verdict-rejected,
+.verdict-failed {
+  color: var(--cf-pink) !important;
+}
+
+.verdict-waiting,
+.verdict-running,
+.verdict-format-judgement .verdict-waiting {
+  color: var(--cf-yellow) !important;
+}
+
+/*
+ * Codeforces rating colours, nudged for legibility on the dark background.
+ *
+ * Some sidebar widgets put the visible nickname inside nested spans with
+ * their own inline colours. Style descendants as well so the compact
+ * "Top rated" and "Top contributors" tables use the same palette as the
+ * full rating table.
+ */
+.user-gray,
+.user-gray:visited,
+.user-gray *,
+.user-gray:visited * {
+  color: #b8b8b2 !important;
+}
+
+.user-green,
+.user-green:visited,
+.user-green *,
+.user-green:visited * {
+  color: var(--cf-green) !important;
+}
+
+.user-cyan,
+.user-cyan:visited,
+.user-cyan *,
+.user-cyan:visited * {
+  color: var(--cf-cyan) !important;
+}
+
+.user-blue,
+.user-blue:visited,
+.user-blue *,
+.user-blue:visited * {
+  color: #5f87ff !important;
+}
+
+.user-violet,
+.user-violet:visited,
+.user-violet *,
+.user-violet:visited * {
+  color: var(--cf-purple) !important;
+}
+
+.user-orange,
+.user-orange:visited,
+.user-orange *,
+.user-orange:visited * {
+  color: var(--cf-orange) !important;
+}
+
+.user-red,
+.user-red:visited,
+.user-red *,
+.user-red:visited *,
+.user-admin,
+.user-admin:visited,
+.user-admin *,
+.user-admin:visited *,
+.user-legendary,
+.user-legendary:visited,
+.user-legendary *,
+.user-legendary:visited * {
+  color: var(--cf-red) !important;
+}
+
+/* Keep legendary handles solid red instead of restoring the black first letter. */
+.user-legendary::first-letter,
+.legendary-user-first-letter {
+  color: var(--cf-red) !important;
+}
+
+/* Popup/modal surfaces. */
+#facebox .popup,
+#facebox .content,
+.ui-dialog,
+.ui-dialog-content,
+.ui-widget-content,
+.ui-widget-header,
+.ui-menu,
+.ui-autocomplete {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.ui-state-hover,
+.ui-state-focus,
+.ui-menu-item:hover {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-pink) !important;
+}
+
+/* Scrollbars in Chromium. */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cf-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cf-border);
+  border: 3px solid var(--cf-bg);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cf-comment);
+}
+
+
+/* Contest tables and side widgets: some Codeforces bits still force pale backgrounds. */
+.datatable .bottom,
+.datatable .bottom td,
+.datatable .footer,
+.datatable .footer td,
+tfoot,
+tfoot td,
+tfoot th {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+/* Native select controls and options. */
+option,
+optgroup {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+}
+
+/* Select2 / Chosen-style widgets used by Codeforces filters. */
+.select2-container,
+.select2-drop,
+.select2-dropdown,
+.select2-results,
+.select2-search,
+.select2-search input,
+.select2-choice,
+.select2-choices,
+.select2-container-multi .select2-choices,
+.select2-container .select2-choice,
+.select2-container .select2-choice .select2-arrow,
+.chosen-container,
+.chosen-drop,
+.chosen-results,
+.chosen-single,
+.chosen-choices,
+.chosen-search input {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+  box-shadow: none !important;
+}
+
+.select2-container .select2-choice,
+.chosen-container-single .chosen-single {
+  background-image: none !important;
+}
+
+.select2-results li,
+.select2-results .select2-result-label,
+.chosen-results li {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+}
+
+.select2-results .select2-highlighted,
+.select2-results li.select2-highlighted,
+.chosen-results li.highlighted,
+.chosen-results li.result-selected,
+.ui-state-active {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-pink) !important;
+}
+
+.select2-container .select2-choice .select2-arrow b,
+.chosen-container-single .chosen-single div b {
+  filter: invert(0.85) !important;
+}
+
+/* Tiny utility/icon buttons on datatables. */
+.datatable a[title],
+.datatable .table-filter,
+.datatable .filter-box,
+.datatable .filter-box a,
+.datatable .caption a[title],
+.roundbox .caption a[title] {
+  border-color: var(--cf-border) !important;
+}
+
+.datatable a[title] img,
+.datatable .caption a[title] img,
+.roundbox .caption a[title] img {
+  background: transparent !important;
+  border-radius: 2px;
+  filter: brightness(0.88) contrast(1.05);
+}
+
+/* Small link strips such as Countries | Cities | Organizations. */
+.roundbox .bottom-links,
+.roundbox .bottom-links a,
+.roundbox .rtable,
+.roundbox .rtable td,
+.roundbox .rtable th {
+  background: transparent !important;
+  border-color: var(--cf-border) !important;
+}
+
+
+/* Codeforces uses jQuery UI Multiselect for filters such as Contest type. */
+button.ui-multiselect,
+.ui-multiselect {
+  background: var(--cf-surface-raised) !important;
+  background-image: none !important;
+  color: var(--cf-fg) !important;
+  border: 1px solid var(--cf-border) !important;
+  box-shadow: none !important;
+}
+
+button.ui-multiselect:hover,
+button.ui-multiselect:focus,
+.ui-multiselect.ui-state-hover,
+.ui-multiselect.ui-state-active {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-fg-strong) !important;
+  border-color: var(--cf-cyan) !important;
+}
+
+.ui-multiselect-menu {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border: 1px solid var(--cf-border) !important;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 35%) !important;
+}
+
+.ui-multiselect-header {
+  background: var(--cf-surface-raised) !important;
+  background-image: none !important;
+  color: var(--cf-muted) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--cf-border) !important;
+}
+
+.ui-multiselect-header a,
+.ui-multiselect-header span {
+  color: var(--cf-cyan) !important;
+}
+
+.ui-multiselect-checkboxes,
+.ui-multiselect-checkboxes li,
+.ui-multiselect-checkboxes li label,
+.ui-multiselect-checkboxes label {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.ui-multiselect-checkboxes li {
+  border-bottom: 1px solid color-mix(in srgb, var(--cf-border) 65%, transparent) !important;
+}
+
+.ui-multiselect-checkboxes li:last-child {
+  border-bottom: 0 !important;
+}
+
+.ui-multiselect-checkboxes li label {
+  margin: 0 !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+.ui-multiselect-checkboxes li label:hover,
+.ui-multiselect-checkboxes li label.ui-state-hover,
+.ui-multiselect-checkboxes li label.ui-state-active {
+  background: var(--cf-surface-hover) !important;
+  color: var(--cf-fg-strong) !important;
+  border-color: transparent !important;
+}
+
+.ui-multiselect-checkboxes input[type="checkbox"] {
+  color-scheme: dark !important;
+  accent-color: var(--cf-pink) !important;
+}
+
+/* Keep the multiselect's own scrollbar inside the palette too. */
+.ui-multiselect-checkboxes::-webkit-scrollbar-track {
+  background: var(--cf-surface) !important;
+}
+
+.ui-multiselect-checkboxes::-webkit-scrollbar-thumb {
+  background: var(--cf-border) !important;
+  border-color: var(--cf-surface) !important;
+}
+
+/*
+ * Contest-filter fallback. Codeforces builds this control dynamically and some
+ * versions ship inline pale styles, so content.js also patches it at runtime.
+ */
+#sidebar select,
+.sidebar select,
+.roundbox select {
+  color-scheme: dark !important;
+}
+
+
+/*
+ * Codeforces gives legendary users a black first letter. That works on the
+ * original light theme and looks half-dead on Molokai. Use a deliberately
+ * specific selector so Codeforces' later-loaded !important rule cannot win.
+ */
+.roundbox table.rtable a.rated-user.user-legendary,
+.roundbox table.rtable a.rated-user.user-legendary:visited,
+.roundbox table.rtable a.rated-user.user-legendary > .legendary-user-first-letter,
+.roundbox table.rtable a.rated-user.user-legendary:visited > .legendary-user-first-letter {
+  color: var(--cf-red) !important;
+}
+
+
+/* MathJax/LaTeX on problem statements must inherit the dark-theme foreground. */
+.problem-statement mjx-container,
+.problem-statement mjx-container *,
+.problem-statement .MathJax,
+.problem-statement .MathJax *,
+.problem-statement .MathJax_Display,
+.problem-statement .MathJax_Display *,
+.problem-statement .MathJax_SVG,
+.problem-statement .MathJax_SVG *,
+.problem-statement .MathJax_SVG_Display,
+.problem-statement .MathJax_SVG_Display *,
+.problem-statement .MathJax_CHTML,
+.problem-statement .MathJax_CHTML *,
+.problem-statement .MathJax_CHTML_Display,
+.problem-statement .MathJax_CHTML_Display * {
+  color: var(--cf-fg) !important;
+}
+
+/* MathJax 2 can hard-code SVG glyph colours instead of using CSS text colour. */
+.problem-statement .MathJax_SVG svg,
+.problem-statement .MathJax_SVG_Display svg,
+.problem-statement mjx-container svg {
+  color: var(--cf-fg) !important;
+}
+
+.problem-statement .MathJax_SVG svg path,
+.problem-statement .MathJax_SVG svg use,
+.problem-statement .MathJax_SVG_Display svg path,
+.problem-statement .MathJax_SVG_Display svg use,
+.problem-statement mjx-container svg path,
+.problem-statement mjx-container svg use {
+  fill: var(--cf-fg) !important;
+}
+
+.problem-statement .MathJax_SVG svg [stroke]:not([stroke="none"]),
+.problem-statement .MathJax_SVG_Display svg [stroke]:not([stroke="none"]),
+.problem-statement mjx-container svg [stroke]:not([stroke="none"]) {
+  stroke: var(--cf-fg) !important;
+}
+
+
+/*
+ * Contest navigation tabs.
+ *
+ * Codeforces uses the old LavaLamp-style backLava element for the animated
+ * selection marker. On a dark theme its little left/bottom image slices turn
+ * into stray pale rectangles, so replace the effect with ordinary tabs.
+ */
+.second-level-menu {
+  background: transparent !important;
+}
+
+.second-level-menu-list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.second-level-menu-list > li:not(.backLava) {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  float: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.second-level-menu-list > li:not(.backLava) > a {
+  display: block !important;
+  padding: 6px 10px !important;
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border: 1px solid var(--cf-border) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+}
+
+.second-level-menu-list > li:not(.backLava) > a:hover,
+.second-level-menu-list > li:not(.backLava) > a:focus {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-cyan) !important;
+  border-color: var(--cf-comment) !important;
+}
+
+.second-level-menu-list > li.selectedLava > a,
+.second-level-menu-list > li.current > a {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-yellow) !important;
+  border-color: var(--cf-comment) !important;
+  box-shadow: inset 0 -2px 0 var(--cf-pink) !important;
+}
+
+/* Kill the legacy moving highlight and all of its image-slice children. */
+.second-level-menu-list > li.backLava,
+.second-level-menu-list > li.backLava .leftLava,
+.second-level-menu-list > li.backLava .bottomLava,
+.second-level-menu-list > li.backLava .cornerLava {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Some add-ons put separator entries in the same list. */
+.second-level-menu-list > li.noLava > a {
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--cf-comment) !important;
+  box-shadow: none !important;
+}
+
+
+/* Sidebar call-to-action buttons. */
+.roundbox input[type="submit"],
+.roundbox input[type="button"],
+.roundbox button,
+.roundbox a.button,
+.roundbox .button,
+.sidebar input[type="submit"],
+.sidebar input[type="button"],
+.sidebar button,
+.sidebar a.button,
+.sidebar .button {
+  display: inline-block !important;
+  min-width: 128px !important;
+  padding: 6px 12px !important;
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border: 1px solid var(--cf-border) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+
+.roundbox input[type="submit"]:hover,
+.roundbox input[type="button"]:hover,
+.roundbox button:hover,
+.roundbox a.button:hover,
+.roundbox .button:hover,
+.sidebar input[type="submit"]:hover,
+.sidebar input[type="button"]:hover,
+.sidebar button:hover,
+.sidebar a.button:hover,
+.sidebar .button:hover,
+.roundbox input[type="submit"]:focus,
+.roundbox input[type="button"]:focus,
+.roundbox button:focus,
+.roundbox a.button:focus,
+.roundbox .button:focus,
+.sidebar input[type="submit"]:focus,
+.sidebar input[type="button"]:focus,
+.sidebar button:focus,
+.sidebar a.button:focus,
+.sidebar .button:focus {
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-cyan) !important;
+  border-color: var(--cf-comment) !important;
+  outline: none !important;
+}
+
+.roundbox input[type="submit"]:active,
+.roundbox input[type="button"]:active,
+.roundbox button:active,
+.roundbox a.button:active,
+.roundbox .button:active,
+.sidebar input[type="submit"]:active,
+.sidebar input[type="button"]:active,
+.sidebar button:active,
+.sidebar a.button:active,
+.sidebar .button:active {
+  color: var(--cf-yellow) !important;
+  box-shadow: inset 0 -2px 0 var(--cf-pink) !important;
+}
+
+
+/*
+ * Source-code viewer / Google Code Prettify.
+ *
+ * Codeforces' built-in syntax colours are designed for a pale background and
+ * become nearly invisible in dark mode. Give displayed source code a proper
+ * Molokai palette instead of merely darkening the surrounding <pre>.
+ */
+pre.prettyprint,
+code.prettyprint,
+.prettyprint,
+.prettyprinted,
+#program-source-text,
+.source-code,
+.sourceCode {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
+  border-color: var(--cf-border) !important;
+  text-shadow: none !important;
+}
+
+/* Plain text and punctuation. */
+.prettyprint .pln,
+.prettyprinted .pln,
+.prettyprint .pun,
+.prettyprinted .pun,
+.prettyprint .opn,
+.prettyprinted .opn,
+.prettyprint .clo,
+.prettyprinted .clo {
+  color: #f8f8f2 !important;
+}
+
+/* Keywords, control flow, directives and tags. */
+.prettyprint .kwd,
+.prettyprinted .kwd,
+.prettyprint .tag,
+.prettyprinted .tag {
+  color: #f92672 !important;
+  font-weight: normal !important;
+}
+
+/* Strings and attribute values. */
+.prettyprint .str,
+.prettyprinted .str,
+.prettyprint .atv,
+.prettyprinted .atv {
+  color: #e6db74 !important;
+}
+
+/* Numeric literals and constants. */
+.prettyprint .lit,
+.prettyprinted .lit {
+  color: #ae81ff !important;
+}
+
+/* Types, declarations and attribute names. */
+.prettyprint .typ,
+.prettyprinted .typ,
+.prettyprint .atn,
+.prettyprinted .atn,
+.prettyprint .dec,
+.prettyprinted .dec {
+  color: #66d9ef !important;
+}
+
+/* Functions. */
+.prettyprint .fun,
+.prettyprinted .fun {
+  color: #a6e22e !important;
+}
+
+/* Variables: keep them readable and quieter than keywords. */
+.prettyprint .var,
+.prettyprinted .var {
+  color: #f8f8f2 !important;
+}
+
+/* Comments. */
+.prettyprint .com,
+.prettyprinted .com {
+  color: #75715e !important;
+  font-style: italic !important;
+}
+
+/* Line-number gutter. */
+.prettyprint ol.linenums,
+.prettyprinted ol.linenums {
+  background: #1b1d1e !important;
+  color: #75715e !important;
+  border-color: var(--cf-border) !important;
+}
+
+.prettyprint ol.linenums > li,
+.prettyprinted ol.linenums > li,
+.prettyprint li.L0,
+.prettyprint li.L1,
+.prettyprint li.L2,
+.prettyprint li.L3,
+.prettyprint li.L4,
+.prettyprint li.L5,
+.prettyprint li.L6,
+.prettyprint li.L7,
+.prettyprint li.L8,
+.prettyprint li.L9 {
+  background: #272822 !important;
+  border-color: transparent !important;
+  color: #75715e !important;
+}
+
+.prettyprint ol.linenums > li::marker,
+.prettyprinted ol.linenums > li::marker {
+  color: #75715e !important;
+}
+
+/* Preserve a clearly visible error/highlight line without the harsh salmon bar. */
+.prettyprint li.highlighted,
+.prettyprint li.highlighted-row,
+.prettyprint li.error,
+.prettyprinted li.highlighted,
+.prettyprinted li.highlighted-row,
+.prettyprinted li.error {
+  background: #4a2636 !important;
+  box-shadow: inset 3px 0 0 #f92672 !important;
+}
+
+
+
+/*
+ * Legacy fieldset sections.
+ *
+ * Codeforces still wraps several contest sections in native fieldsets.
+ * Do not let Chromium draw any part of the native border: even a single
+ * surviving side produces the odd white hooks beside the section title.
+ */
+fieldset,
+#pageContent fieldset,
+.content-with-sidebar fieldset,
+#body fieldset {
+  min-width: 0 !important;
+  margin: 14px 0 16px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+fieldset > legend,
+#pageContent fieldset > legend,
+.content-with-sidebar fieldset > legend,
+#body fieldset > legend {
+  display: block !important;
+  float: none !important;
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: var(--cf-fg-strong) !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+}
+
+/* A deliberate divider looks cleaner than the browser's fieldset geometry. */
+fieldset > legend::after,
+#pageContent fieldset > legend::after,
+.content-with-sidebar fieldset > legend::after,
+#body fieldset > legend::after {
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  margin-top: 5px !important;
+  background: var(--cf-border) !important;
+}
+
+fieldset .second-level-menu,
+#pageContent fieldset .second-level-menu,
+.content-with-sidebar fieldset .second-level-menu,
+#body fieldset .second-level-menu {
+  margin-top: 0 !important;
+}
+
+/*
+ * Keep Codeforces' legacy second-level menus in normal document flow.
+ * The original LavaLamp layout relies on fixed heights/floats; once we turn
+ * the list into flexbox the parent can collapse, making headings and tables
+ * slide underneath the tabs.
+ */
+.second-level-menu {
+  display: block !important;
+  position: static !important;
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 34px !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  inset: auto !important;
+  transform: none !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.second-level-menu-list {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  float: none !important;
+  clear: both !important;
+  width: auto !important;
+  min-height: 34px !important;
+  flex-wrap: wrap !important;
+}
+
+/*
+ * Legacy datatables use four sprite-based corner divs plus a fifth direct
+ * child for the caption. Those sprites are the little white hooks visible on
+ * status pages, so remove them and give the table a normal Molokai frame.
+ */
+.datatable {
+  position: relative !important;
+  clear: both !important;
+  margin-top: 12px !important;
+  padding: 0 !important;
+  background: var(--cf-surface) !important;
+  border: 1px solid var(--cf-border) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+.datatable > .lt,
+.datatable > .rt,
+.datatable > .lb,
+.datatable > .rb {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  border: 0 !important;
+}
+
+/* Codeforces' caption is traditionally the fifth direct child. */
+.datatable > div:nth-child(5) {
+  position: relative !important;
+  min-height: 24px !important;
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  background: var(--cf-surface-raised) !important;
+  color: var(--cf-fg-strong) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--cf-border) !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+.datatable > div:nth-child(5) img {
+  opacity: 0.75 !important;
+  filter: brightness(1.15) contrast(0.9) !important;
+}
+
+.datatable > table,
+.datatable > table:first-of-type {
+  margin-top: 0 !important;
+  border-top: 0 !important;
+}
+
+
+/*
+ * Problemset pages can receive a JavaScript-calculated top offset from
+ * Codeforces' old floating submenu code.  The Molokai tabs live in normal
+ * flow, so those coordinates must never be allowed to create a giant gap.
+ */
+body.cf-molokai-problemset .second-level-menu,
+body.cf-molokai-problemset .second-level-menu-list {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  inset: auto !important;
+  transform: none !important;
+}
+
+body.cf-molokai-problemset #pageContent > .second-level-menu:first-of-type {
+  margin-top: 0 !important;
+}
+
+/*
+ * Keep main content beside Codeforces' floated sidebar.
+ *
+ * `clear: both` on a child of the main column clears the sidebar float too,
+ * which pushes menus and datatables below the entire sidebar and creates a
+ * several-hundred-pixel empty gap on /problemset, /contests, and similar
+ * pages. Flexbox already keeps the submenu itself in flow, so no clearing is
+ * needed here.
+ */
+.second-level-menu,
+.second-level-menu-list,
+.datatable,
+.content-with-sidebar .content .second-level-menu,
+.content-with-sidebar .content .second-level-menu-list,
+.content-with-sidebar .content .datatable {
+  clear: none !important;
+}
+
+/* Keep the main-column widgets in normal flow without disturbing the sidebar. */
+.content-with-sidebar .content .second-level-menu {
+  display: block !important;
+  position: static !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.content-with-sidebar .content .datatable {
+  position: relative !important;
+  margin-top: 12px !important;
+}
+
+
+/* Contest registration notice shown above the contest title. */
+.cf-molokai-registration-notice,
+.alert-info,
+.alert.alert-info {
+  background: var(--cf-surface) !important;
+  background-color: var(--cf-surface) !important;
+  background-image: none !important;
+  color: var(--cf-fg) !important;
+  border: 1px solid var(--cf-border) !important;
+  border-left: 3px solid var(--cf-cyan) !important;
+  box-shadow: none !important;
+}
+
+.cf-molokai-registration-notice a:not(.rated-user),
+.alert-info a:not(.rated-user) {
+  color: var(--cf-cyan) !important;
+}
+
+.cf-molokai-registration-notice button,
+.cf-molokai-registration-notice input[type="button"],
+.cf-molokai-registration-notice input[type="submit"],
+.cf-molokai-registration-notice a.button {
+  background: var(--cf-surface-raised) !important;
+  background-image: none !important;
+  color: var(--cf-fg-strong) !important;
+  border: 1px solid var(--cf-border) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.cf-molokai-registration-notice button:hover,
+.cf-molokai-registration-notice input[type="button"]:hover,
+.cf-molokai-registration-notice input[type="submit"]:hover,
+.cf-molokai-registration-notice a.button:hover {
+  color: var(--cf-cyan) !important;
+  border-color: var(--cf-comment) !important;
+}
+
+
+/*
+ * Unrated Codeforces users use `user-black` on the light theme. Black handles
+ * disappear on Molokai, so give them the same neutral light grey as other
+ * unrated/grey users.
+ */
+.user-black,
+.user-black:visited,
+.user-black *,
+.user-black:visited * {
+  color: #b8b8b2 !important;
+}
+
+/*
+ * MathJax also appears in blogs, announcements and editorials, not only in
+ * problem statements. Codeforces' light theme can leave the generated glyphs
+ * black, so theme MathJax globally while preserving the surrounding text.
+ */
+mjx-container,
+mjx-container *,
+.MathJax,
+.MathJax *,
+.MathJax_Display,
+.MathJax_Display *,
+.MathJax_SVG,
+.MathJax_SVG *,
+.MathJax_SVG_Display,
+.MathJax_SVG_Display *,
+.MathJax_CHTML,
+.MathJax_CHTML *,
+.MathJax_CHTML_Display,
+.MathJax_CHTML_Display * {
+  color: var(--cf-fg) !important;
+}
+
+.MathJax_SVG svg,
+.MathJax_SVG_Display svg,
+mjx-container svg {
+  color: var(--cf-fg) !important;
+}
+
+.MathJax_SVG svg path,
+.MathJax_SVG svg use,
+.MathJax_SVG_Display svg path,
+.MathJax_SVG_Display svg use,
+mjx-container svg path,
+mjx-container svg use {
+  fill: var(--cf-fg) !important;
+}
+
+.MathJax_SVG svg [stroke]:not([stroke="none"]),
+.MathJax_SVG_Display svg [stroke]:not([stroke="none"]),
+mjx-container svg [stroke]:not([stroke="none"]) {
+  stroke: var(--cf-fg) !important;
+}
+
+/*
+ * Tables embedded in blogs/editorials.
+ *
+ * Markdown tables can use <th> cells down the first column as row labels.
+ * Codeforces' light theme gives those cells a pale background, which leaves
+ * light Molokai text almost invisible. Theme both header and row-header cells
+ * explicitly instead of assuming <th> only appears inside <thead>.
+ */
+.topic .ttypography table,
+.ttypography table {
+  background: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.topic .ttypography table th,
+.ttypography table th {
+  background: var(--cf-surface-raised) !important;
+  background-color: var(--cf-surface-raised) !important;
+  color: var(--cf-fg-strong) !important;
+  border-color: var(--cf-border) !important;
+  font-weight: 600 !important;
+}
+
+.topic .ttypography table td,
+.ttypography table td {
+  background: var(--cf-surface) !important;
+  background-color: var(--cf-surface) !important;
+  color: var(--cf-fg) !important;
+  border-color: var(--cf-border) !important;
+}
+
+.topic .ttypography table tbody tr:nth-child(even) td,
+.ttypography table tbody tr:nth-child(even) td {
+  background: var(--cf-surface-alt) !important;
+  background-color: var(--cf-surface-alt) !important;
+}
+
+/* Keep row-header cells distinct even on striped rows. */
+.topic .ttypography table tbody tr:nth-child(even) th,
+.ttypography table tbody tr:nth-child(even) th {
+  background: var(--cf-surface-raised) !important;
+  background-color: var(--cf-surface-raised) !important;
+}
+
+/* Links and rated handles keep their semantic colours inside blog tables. */
+.topic .ttypography table a:not(.rated-user),
+.ttypography table a:not(.rated-user) {
+  color: var(--cf-cyan) !important;
+}
+
+
+/* Recent-actions blog titles: quieter neutral instead of bright cyan. */
+.cf-molokai-recent-actions li > a:not(.rated-user),
+.cf-molokai-recent-actions li > a:not(.rated-user):visited,
+.cf-molokai-recent-actions a:not(.rated-user),
+.cf-molokai-recent-actions a:not(.rated-user):visited {
+  color: #c8c8c2 !important;
+}
+
+.cf-molokai-recent-actions li > a:not(.rated-user):hover,
+.cf-molokai-recent-actions li > a:not(.rated-user):focus,
+.cf-molokai-recent-actions a:not(.rated-user):hover,
+.cf-molokai-recent-actions a:not(.rated-user):focus {
+  color: var(--cf-fg-strong) !important;
+}

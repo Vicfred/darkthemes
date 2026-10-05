@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Molokai Dark",
+  "version": "0.3.16",
+  "description": "A Monokai/Molokai-inspired dark theme for Codeforces.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://codeforces.com/*",
+        "https://www.codeforces.com/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

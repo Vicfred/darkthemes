@@ -1,0 +1,1048 @@
+:root {
+  color-scheme: dark;
+
+  /* Molokai / Monokai palette. */
+  --ac-bg: #1b1d1e;
+  --ac-bg-deep: #171819;
+  --ac-surface: #20211d;
+  --ac-surface-alt: #24251f;
+  --ac-surface-raised: #272822;
+  --ac-surface-hover: #30312b;
+  --ac-border: #3e3d32;
+
+  --ac-fg: #e8e8e3;
+  --ac-fg-strong: #f8f8f2;
+  --ac-muted: #a6a69c;
+  --ac-comment: #75715e;
+
+  --ac-pink: #f92672;
+  --ac-green: #a6e22e;
+  --ac-cyan: #66d9ef;
+  --ac-yellow: #e6db74;
+  --ac-purple: #ae81ff;
+  --ac-orange: #fd971f;
+  --ac-red: #ff5f5f;
+}
+
+html,
+body {
+  background: var(--ac-bg) !important;
+  color: var(--ac-fg) !important;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  color: var(--ac-fg);
+}
+
+::selection {
+  background: var(--ac-purple);
+  color: var(--ac-bg-deep);
+}
+
+/* General typography and links. */
+a,
+a:visited {
+  color: var(--ac-cyan);
+}
+
+a:hover,
+a:focus {
+  color: var(--ac-pink);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  color: var(--ac-fg-strong);
+}
+
+.text-muted,
+small,
+.help-block {
+  color: var(--ac-muted) !important;
+}
+
+hr {
+  border-color: var(--ac-border) !important;
+}
+
+/* Main layout. */
+html,
+body,
+#main-container {
+  background: var(--ac-bg) !important;
+}
+
+#main-container {
+  box-shadow: none !important;
+}
+
+.container,
+.container-fluid,
+.row,
+.col-sm-12,
+.col-md-12 {
+  background-color: transparent !important;
+}
+
+/* Header / navbar. */
+.navbar,
+.navbar-inverse,
+.navbar-default {
+  background: var(--ac-surface-raised) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand,
+.navbar-inverse .navbar-brand,
+.navbar-default .navbar-brand,
+.navbar-inverse .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a,
+.navbar-inverse .navbar-text,
+.navbar-default .navbar-text {
+  color: var(--ac-fg) !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:focus {
+  background: var(--ac-surface-hover) !important;
+  color: var(--ac-cyan) !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:hover {
+  background: var(--ac-surface) !important;
+  color: var(--ac-yellow) !important;
+  box-shadow: inset 0 -2px 0 var(--ac-pink) !important;
+}
+
+.navbar-toggle,
+.navbar-inverse .navbar-toggle,
+.navbar-default .navbar-toggle {
+  border-color: var(--ac-border) !important;
+}
+
+.navbar-toggle .icon-bar {
+  background: var(--ac-fg) !important;
+}
+
+/* Panels / cards. */
+.panel,
+.panel-default,
+.panel-primary,
+.panel-info,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.well,
+.jumbotron {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.panel-heading,
+.panel-default > .panel-heading,
+.panel-primary > .panel-heading,
+.panel-info > .panel-heading,
+.panel-success > .panel-heading,
+.panel-warning > .panel-heading,
+.panel-danger > .panel-heading {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-yellow) !important;
+  border-color: var(--ac-border) !important;
+}
+
+.panel-footer {
+  background: var(--ac-surface-alt) !important;
+  color: var(--ac-muted) !important;
+  border-color: var(--ac-border) !important;
+}
+
+/* Contest navigation tabs. */
+.nav-tabs {
+  border-bottom-color: var(--ac-border) !important;
+}
+
+.nav-tabs > li > a {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border: 1px solid var(--ac-border) !important;
+  border-bottom-color: var(--ac-border) !important;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-cyan) !important;
+  border-color: var(--ac-comment) !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-yellow) !important;
+  border-color: var(--ac-comment) !important;
+  border-bottom-color: var(--ac-surface-raised) !important;
+  box-shadow: inset 0 2px 0 var(--ac-pink) !important;
+}
+
+/* Dropdown menus. */
+.dropdown-menu {
+  background: var(--ac-surface) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+.dropdown-menu > li > a {
+  color: var(--ac-fg) !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover {
+  background: var(--ac-surface-hover) !important;
+  color: var(--ac-cyan) !important;
+}
+
+.dropdown-menu .divider {
+  background: var(--ac-border) !important;
+}
+
+/* Tables. */
+.table,
+table {
+  background: transparent !important;
+  color: var(--ac-fg) !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+table th,
+table td {
+  border-color: var(--ac-border) !important;
+  color: var(--ac-fg) !important;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+table > thead > tr > th,
+table > thead > tr > td {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-fg-strong) !important;
+}
+
+.table > tbody > tr,
+.table > tbody > tr > td,
+.table > tbody > tr > th {
+  background: var(--ac-surface) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd),
+.table-striped > tbody > tr:nth-of-type(odd) > td,
+.table-striped > tbody > tr:nth-of-type(odd) > th {
+  background: var(--ac-surface-alt) !important;
+}
+
+.table-hover > tbody > tr:hover,
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background: var(--ac-surface-hover) !important;
+}
+
+/* Standings often colour individual cells. */
+.standings-rank,
+.standings-username,
+.standings-result,
+.standings-fa,
+.standings-task,
+.standings-statistics {
+  background-color: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+}
+
+/* Forms. */
+.form-control,
+input,
+select,
+textarea,
+.input-group-addon {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-fg-strong) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--ac-cyan) !important;
+  box-shadow: 0 0 0 1px var(--ac-cyan) !important;
+  outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ac-comment) !important;
+}
+
+option,
+optgroup {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+}
+
+/* Buttons. */
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-cyan) !important;
+  border-color: var(--ac-comment) !important;
+}
+
+.btn-primary,
+.btn-success {
+  color: var(--ac-fg-strong) !important;
+  border-color: var(--ac-green) !important;
+}
+
+.btn-danger {
+  color: var(--ac-fg-strong) !important;
+  border-color: var(--ac-pink) !important;
+}
+
+.btn-warning {
+  color: var(--ac-yellow) !important;
+  border-color: var(--ac-yellow) !important;
+}
+
+/* Problem statements. */
+#task-statement,
+#task-statement .part,
+#task-statement .lang,
+#task-statement section,
+#task-statement p,
+#task-statement li {
+  background: transparent !important;
+  color: var(--ac-fg) !important;
+}
+
+#task-statement h1,
+#task-statement h2,
+#task-statement h3,
+#task-statement h4,
+#task-statement .section-title {
+  color: var(--ac-fg-strong) !important;
+}
+
+#task-statement a:not(.btn) {
+  color: var(--ac-cyan) !important;
+}
+
+#task-statement a:not(.btn):hover {
+  color: var(--ac-pink) !important;
+}
+
+#task-statement pre,
+#task-statement code,
+pre,
+code,
+.prettyprint,
+.prettyprinted {
+  background: var(--ac-bg-deep) !important;
+  color: var(--ac-fg-strong) !important;
+  border-color: var(--ac-border) !important;
+}
+
+#task-statement var,
+#task-statement .MathJax,
+#task-statement .MathJax_Display,
+#task-statement .MathJax_SVG,
+#task-statement .MathJax_SVG *,
+#task-statement mjx-container,
+#task-statement mjx-container * {
+  color: var(--ac-fg) !important;
+}
+
+#task-statement .MathJax_SVG svg path,
+#task-statement .MathJax_SVG svg use,
+#task-statement mjx-container svg path,
+#task-statement mjx-container svg use {
+  fill: var(--ac-fg) !important;
+}
+
+/* Alerts and notices. */
+.alert {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+}
+
+.alert-info {
+  border-left: 3px solid var(--ac-cyan) !important;
+}
+
+.alert-success {
+  border-left: 3px solid var(--ac-green) !important;
+}
+
+.alert-warning {
+  border-left: 3px solid var(--ac-yellow) !important;
+}
+
+.alert-danger {
+  border-left: 3px solid var(--ac-pink) !important;
+}
+
+/* Pagination / labels. */
+.pagination > li > a,
+.pagination > li > span,
+.label,
+.badge {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > li > a:hover {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-yellow) !important;
+  border-color: var(--ac-comment) !important;
+}
+
+/* Modals and popovers. */
+.modal-content,
+.popover,
+.tooltip-inner {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.modal-header,
+.modal-footer,
+.popover-title {
+  background: var(--ac-surface-raised) !important;
+  border-color: var(--ac-border) !important;
+}
+
+/* AtCoder rating colours, adjusted for dark backgrounds. */
+.user-unrated,
+a .user-unrated {
+  color: #b8b8b2 !important;
+}
+
+.user-gray,
+a .user-gray {
+  color: #b8b8b2 !important;
+}
+
+.user-brown,
+a .user-brown {
+  color: #c58f5a !important;
+}
+
+.user-green,
+a .user-green {
+  color: var(--ac-green) !important;
+}
+
+.user-cyan,
+a .user-cyan {
+  color: var(--ac-cyan) !important;
+}
+
+.user-blue,
+a .user-blue {
+  color: #5f87ff !important;
+}
+
+.user-yellow,
+a .user-yellow {
+  color: var(--ac-yellow) !important;
+}
+
+.user-orange,
+a .user-orange {
+  color: var(--ac-orange) !important;
+}
+
+.user-red,
+a .user-red {
+  color: var(--ac-red) !important;
+}
+
+/* Preserve rating colours when the username is a link. */
+a.username:hover .user-unrated,
+a.username:hover .user-gray,
+a.username:hover .user-brown,
+a.username:hover .user-green,
+a.username:hover .user-cyan,
+a.username:hover .user-blue,
+a.username:hover .user-yellow,
+a.username:hover .user-orange,
+a.username:hover .user-red {
+  filter: brightness(1.18);
+}
+
+/* Footer. */
+footer,
+#footer {
+  background: transparent !important;
+  color: var(--ac-muted) !important;
+  border-color: var(--ac-border) !important;
+}
+
+/* Scrollbars. */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ac-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ac-border);
+  border: 3px solid var(--ac-bg);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ac-comment);
+}
+
+
+/* Full-page background, including AtCoder's outer content wrapper. */
+#main-div,
+#main-div.float-container,
+.float-container,
+footer,
+.footer {
+  background: var(--ac-bg) !important;
+  background-color: var(--ac-bg) !important;
+}
+
+#main-div.float-container > #main-container {
+  background: var(--ac-bg) !important;
+  box-shadow: none !important;
+}
+
+
+/* Contest landing-page hero / title card. */
+.contest-top,
+.contest-top-info,
+.contest-top-information,
+.contest-title,
+.contest-header,
+.jumbotron,
+.hero,
+.hero-unit {
+  background: var(--ac-surface) !important;
+  background-color: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.contest-top h1,
+.contest-top-info h1,
+.contest-top-information h1,
+.contest-title h1,
+.contest-header h1,
+.jumbotron h1,
+.hero h1,
+.hero-unit h1 {
+  color: var(--ac-fg-strong) !important;
+  text-shadow: none !important;
+}
+
+.contest-top .btn,
+.contest-top-info .btn,
+.contest-top-information .btn,
+.contest-title .btn,
+.contest-header .btn,
+.jumbotron .btn,
+.hero .btn,
+.hero-unit .btn {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-fg) !important;
+  border: 1px solid var(--ac-border) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.contest-top .btn:hover,
+.contest-top-info .btn:hover,
+.contest-top-information .btn:hover,
+.contest-title .btn:hover,
+.contest-header .btn:hover,
+.jumbotron .btn:hover,
+.hero .btn:hover,
+.hero-unit .btn:hover {
+  background: var(--ac-surface-hover) !important;
+  color: var(--ac-cyan) !important;
+}
+
+
+/* Submission page: task/language pickers use Select2 rather than native selects. */
+.select2-container,
+.select2-container .select2-selection,
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple,
+.select2-dropdown,
+.select2-results,
+.select2-results__options,
+.select2-search,
+.select2-search__field,
+.select2-selection__rendered {
+  background: var(--ac-surface) !important;
+  background-color: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+  min-height: 34px !important;
+}
+
+.select2-container .select2-selection__rendered {
+  color: var(--ac-fg) !important;
+}
+
+.select2-container .select2-selection__placeholder {
+  color: var(--ac-muted) !important;
+}
+
+.select2-container .select2-selection__arrow b {
+  border-top-color: var(--ac-muted) !important;
+  border-bottom-color: var(--ac-muted) !important;
+}
+
+.select2-results__option {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-bottom: 1px solid var(--ac-border) !important;
+}
+
+.select2-results__option--highlighted,
+.select2-results__option[aria-selected="true"],
+.select2-results__option--selected {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-cyan) !important;
+}
+
+.select2-search__field:focus {
+  border-color: var(--ac-cyan) !important;
+  outline: none !important;
+}
+
+/* Older Select2 markup, still found on some AtCoder pages. */
+.select2-choice,
+.select2-drop,
+.select2-results,
+.select2-search input,
+.select2-container-multi .select2-choices,
+.select2-container .select2-choice .select2-arrow {
+  background: var(--ac-surface) !important;
+  background-image: none !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.select2-results li,
+.select2-results .select2-result-label {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+}
+
+.select2-results .select2-highlighted {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-cyan) !important;
+}
+
+/* Submission source editor. Cover plain textarea, CodeMirror and Ace. */
+textarea[name="sourceCode"],
+#sourceCode,
+#source-code,
+.source-code,
+.source-code textarea,
+.editor textarea,
+.CodeMirror,
+.CodeMirror-scroll,
+.CodeMirror-gutters,
+.ace_editor,
+.ace_scroller,
+.ace_content,
+.ace_gutter {
+  background: var(--ac-bg-deep) !important;
+  background-color: var(--ac-bg-deep) !important;
+  color: var(--ac-fg-strong) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+textarea[name="sourceCode"],
+#sourceCode,
+#source-code,
+.source-code textarea,
+.editor textarea {
+  caret-color: var(--ac-fg-strong) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+.CodeMirror-gutters,
+.ace_gutter {
+  background: var(--ac-surface) !important;
+  color: var(--ac-muted) !important;
+  border-color: var(--ac-border) !important;
+}
+
+.CodeMirror-cursor,
+.ace_cursor {
+  border-left-color: var(--ac-fg-strong) !important;
+  color: var(--ac-fg-strong) !important;
+}
+
+.CodeMirror-selected,
+.ace_selection {
+  background: #49483e !important;
+}
+
+/* The source panel itself should not keep Bootstrap's white panel body. */
+#submit-form .panel,
+#submit-form .panel-body,
+form[action*="submit"] .panel,
+form[action*="submit"] .panel-body,
+form[action*="submit"] .form-control,
+#submit-form .form-control {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+form[action*="submit"] textarea.form-control,
+#submit-form textarea.form-control {
+  background: var(--ac-bg-deep) !important;
+  color: var(--ac-fg-strong) !important;
+}
+
+/* AtCoder profile rating graph is drawn on canvas, but its surrounding UI is CSS. */
+#ratingGraph,
+#ratingStatus {
+  background: transparent !important;
+  border-radius: 3px;
+}
+
+#rating-graph-expand,
+.btn-text-group .btn,
+.btn-text-group button {
+  background: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+#rating-graph-expand:hover,
+.btn-text-group .btn:hover,
+.btn-text-group button:hover {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-cyan) !important;
+}
+
+
+/*
+ * Source-code viewers and editors.
+ *
+ * AtCoder uses Ace for read-only submitted source on several pages. The
+ * editor background was dark already, but Ace's own syntax-token colours
+ * remained from the light theme, which made keywords nearly disappear.
+ * Give Ace a proper Monokai palette and cover the other highlighters AtCoder
+ * has used over the years as well.
+ */
+.ace_editor,
+.ace_scroller,
+.ace_content,
+.ace_text-layer {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
+}
+
+.ace_gutter {
+  background: #1b1d1e !important;
+  color: #75715e !important;
+  border-right: 1px solid #3e3d32 !important;
+}
+
+.ace_gutter-cell {
+  background: transparent !important;
+  color: #75715e !important;
+}
+
+.ace_gutter-active-line,
+.ace_marker-layer .ace_active-line {
+  background: #30312b !important;
+}
+
+.ace_marker-layer .ace_selection {
+  background: #49483e !important;
+}
+
+.ace_cursor {
+  color: #f8f8f2 !important;
+  border-left-color: #f8f8f2 !important;
+}
+
+.ace_fold-widget {
+  color: #a6a69c !important;
+}
+
+.ace_indent-guide {
+  opacity: 0.28 !important;
+  filter: invert(1) !important;
+}
+
+/* Monokai syntax colours for Ace. */
+.ace_comment,
+.ace_comment.ace_doc,
+.ace_comment.ace_doc.ace_tag {
+  color: #75715e !important;
+  font-style: italic !important;
+}
+
+.ace_keyword,
+.ace_storage,
+.ace_meta.ace_tag,
+.ace_entity.ace_other.ace_attribute-name {
+  color: #f92672 !important;
+}
+
+.ace_keyword.ace_operator,
+.ace_punctuation.ace_operator {
+  color: #f92672 !important;
+}
+
+.ace_string,
+.ace_string.ace_regexp,
+.ace_constant.ace_other.ace_symbol {
+  color: #e6db74 !important;
+}
+
+.ace_constant.ace_numeric,
+.ace_constant.ace_language,
+.ace_constant.ace_character,
+.ace_variable.ace_language,
+.ace_support.ace_constant {
+  color: #ae81ff !important;
+}
+
+.ace_entity.ace_name.ace_function,
+.ace_support.ace_function,
+.ace_meta.ace_function-call,
+.ace_variable.ace_function {
+  color: #a6e22e !important;
+}
+
+.ace_entity.ace_name.ace_class,
+.ace_entity.ace_name.ace_type,
+.ace_support.ace_type,
+.ace_support.ace_class,
+.ace_storage.ace_type {
+  color: #66d9ef !important;
+  font-style: italic !important;
+}
+
+.ace_variable,
+.ace_identifier,
+.ace_paren,
+.ace_punctuation,
+.ace_text {
+  color: #f8f8f2 !important;
+}
+
+.ace_invalid {
+  background: #f92672 !important;
+  color: #f8f8f2 !important;
+}
+
+/* CodeMirror, used by some AtCoder/editorial components. */
+.CodeMirror,
+.CodeMirror-scroll,
+.CodeMirror-code,
+.CodeMirror-lines {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
+}
+
+.CodeMirror-gutters {
+  background: #1b1d1e !important;
+  color: #75715e !important;
+  border-right: 1px solid #3e3d32 !important;
+}
+
+.CodeMirror-linenumber {
+  color: #75715e !important;
+}
+
+.CodeMirror-activeline-background {
+  background: #30312b !important;
+}
+
+.CodeMirror-selected {
+  background: #49483e !important;
+}
+
+.cm-comment { color: #75715e !important; font-style: italic !important; }
+.cm-keyword,
+.cm-operator { color: #f92672 !important; }
+.cm-string,
+.cm-string-2 { color: #e6db74 !important; }
+.cm-number,
+.cm-atom,
+.cm-builtin { color: #ae81ff !important; }
+.cm-def,
+.cm-variable-2,
+.cm-variable-3 { color: #a6e22e !important; }
+.cm-type,
+.cm-qualifier,
+.cm-property { color: #66d9ef !important; }
+.cm-variable,
+.cm-punctuation { color: #f8f8f2 !important; }
+.cm-error { background: #f92672 !important; color: #f8f8f2 !important; }
+
+/* Google Code Prettify / static source snippets. */
+pre.prettyprint,
+.prettyprint,
+.prettyprinted,
+pre.linenums,
+ol.linenums,
+ol.linenums > li {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
+  border-color: #3e3d32 !important;
+}
+
+ol.linenums > li::marker,
+.linenums li {
+  color: #75715e !important;
+}
+
+.prettyprint .com { color: #75715e !important; font-style: italic !important; }
+.prettyprint .kwd { color: #f92672 !important; }
+.prettyprint .str { color: #e6db74 !important; }
+.prettyprint .lit { color: #ae81ff !important; }
+.prettyprint .typ { color: #66d9ef !important; font-style: italic !important; }
+.prettyprint .fun { color: #a6e22e !important; }
+.prettyprint .pun,
+.prettyprint .pln { color: #f8f8f2 !important; }
+.prettyprint .tag,
+.prettyprint .atn { color: #f92672 !important; }
+.prettyprint .atv { color: #e6db74 !important; }
+.prettyprint .dec { color: #ae81ff !important; }
+
+/* Highlight.js, should an editorial/source block use it. */
+.hljs {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
+}
+
+.hljs-comment,
+.hljs-quote { color: #75715e !important; font-style: italic !important; }
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst { color: #f92672 !important; }
+.hljs-string,
+.hljs-doctag,
+.hljs-regexp { color: #e6db74 !important; }
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet { color: #ae81ff !important; }
+.hljs-title,
+.hljs-section,
+.hljs-function .hljs-title { color: #a6e22e !important; }
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-built_in { color: #66d9ef !important; }
+
+
+/* Robust contest landing hero, including pre-contest registration pages. */
+.ac-molokai-contest-hero {
+  background: var(--ac-surface) !important;
+  background-color: var(--ac-surface) !important;
+  color: var(--ac-fg) !important;
+  border: 1px solid var(--ac-border) !important;
+  box-shadow: none !important;
+}
+
+.ac-molokai-contest-hero > h1,
+.ac-molokai-contest-hero h1 {
+  color: var(--ac-fg-strong) !important;
+  text-shadow: none !important;
+}
+
+.ac-molokai-contest-hero .btn,
+.ac-molokai-contest-hero button,
+.ac-molokai-contest-hero input[type="button"],
+.ac-molokai-contest-hero input[type="submit"] {
+  background: var(--ac-surface-raised) !important;
+  color: var(--ac-fg) !important;
+  border: 1px solid var(--ac-border) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.ac-molokai-contest-hero .btn:hover,
+.ac-molokai-contest-hero button:hover,
+.ac-molokai-contest-hero input[type="button"]:hover,
+.ac-molokai-contest-hero input[type="submit"]:hover {
+  background: var(--ac-surface-hover) !important;
+  color: var(--ac-cyan) !important;
+}

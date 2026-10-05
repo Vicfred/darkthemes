@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "CSES Always Dark",
+  "version": "1.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cses.fi/*"
+      ],
+      "css": [
+        "dark.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

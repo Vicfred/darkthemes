@@ -1046,3 +1046,18 @@ ol.linenums > li::marker,
   background: var(--ac-surface-hover) !important;
   color: var(--ac-cyan) !important;
 }
+
+
+/* Contest hero: sponsor-prefixed contest titles are still the same component. */
+.ac-molokai-contest-hero,
+.ac-molokai-contest-hero.jumbotron {
+  background: var(--ac-surface) !important;
+  background-color: var(--ac-surface) !important;
+  background-image: none !important;
+  color: var(--ac-fg) !important;
+}
+
+.ac-molokai-contest-hero h1 {
+  color: var(--ac-fg-strong) !important;
+  text-shadow: none !important;
+}
